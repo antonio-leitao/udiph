@@ -4,7 +4,7 @@ from sklearn.neighbors import NearestNeighbors
 import numpy as np
 import matplotlib.pyplot as plt
 
-def UDiPH(X, n_neighbors=15, distance_matrix=False,return_complex=False):
+def UDIPH(X, n_neighbors=15, distance_matrix=False,return_complex=False):
     """
     Returns a distance matrix corresponding to a local uniform distribution of the points.
     Basically creates a new metric space where points are uniformly sampled in space.
