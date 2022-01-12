@@ -5,13 +5,18 @@
 
 UDiPH is a package that creates a new metric space where the points are uniformly sampled with respect to a global metric. It is oriented for creating Vietoris-Rips filtrations that are independent of the metric of the initial space. This work is very influced on UMAP.
 
+UDiPH excells when comparing homology of spaces with different metrics, for example consider a continuous deformation acting on a set of points:
+<p align="center">
+  <img src="images/udiph_readme.png" width="800"/>
+</p>
+
 Standard Vietoris-Rips filtration:
 <p align="center">
-  <img src="images/2filtrations_std.png" width="600"/>
+  <img src="images/2filtrations_std.png" width="800"/>
 </p>
 Vietoris-Rips filtration using metric space created by UDiPH is based on local density:
 <p align="center">
-  <img src="images/2filtrations_udiph.png" width="600"/>
+  <img src="images/2filtrations_udiph.png" width="800"/>
 </p>
 
 ## Installation
@@ -25,7 +30,6 @@ UDIPH is available on PyPI,
 ```sh
 pip install udiph
 ```
-
 ## Usage
 ```python
 import udiph
@@ -39,6 +43,9 @@ cover = udiph.UDIPH(X=X, n_neighbors=15, distance_matrix=False, return_complex=F
  
 **Returns:**
  -  ``cover``: numpy array (n_points, n_features) of points in the decision boundary.
+
+## Why should you use it?
+
 
 ## How does it work?
 The basic assumption on UDiPh relies on the idea that data comes uniformly sampled from an unknown Riemmannian manifold. As a consequence, "bigger" holes in the governing manifold are respresented by having a higher number of points sampled from their boundary, and "small" holes will have less points sampled.
