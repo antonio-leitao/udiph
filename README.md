@@ -19,6 +19,7 @@ Vietoris-Rips filtration using metric space created by UDiPH is based on local d
   <img src="images/2filtrations_udiph.png" width="800"/>
 </p>
 Since we are in the presence of a continuous deformation it is excpeted that the homology remains invariant. However due to the difference in metric in the image space, the standard Vietoris-Rips filtration does not accuratly capture this invariance. Notice how a filtration using UDiPH captures manages to capture both homology generators.
+
 ## Installation
 Dependencies:
   - Numpy
