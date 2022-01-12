@@ -3,7 +3,7 @@
 
 [![Downloads](https://pepy.tech/badge/udiph)](https://pepy.tech/project/udiph) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://github.com/Antonio-Leitao/dbsampler/blob/main/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-03a80e.svg)](https://github.com/Antonio-Leitao) [![version ](https://img.shields.io/badge/release-0.0.1-blue.svg)](https://pypi.org/project/dbsampler/) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-UDiPH is a package that creates a new metric space where the points are uniformly sampled with respect to a global metric. It is oriented for creating Vietoris-Rips filtrations that are independent of the metric of the initial space. This work is very influced on UMAP.
+UDiPH is a package that creates a new metric space where the points are uniformly sampled with respect to a global metric. It is oriented for creating Vietoris-Rips filtrations that are independent of the metric of the initial space. This work is very influced on [UMAP](https://github.com/lmcinnes/umap).
 
 UDiPH excells when comparing homology of spaces with different metrics, for example consider a continuous deformation acting on a set of points:
 <p align="center">
@@ -19,7 +19,6 @@ Vietoris-Rips filtration using metric space created by UDiPH is based on local d
   <img src="images/2filtrations_udiph.png" width="800"/>
 </p>
 Since we are in the presence of a continuous deformation it is excpeted that the homology remains invariant. However due to the difference in metric in the image space, the standard Vietoris-Rips filtration does not accuratly capture this invariance. Notice how a filtration using UDiPH captures manages to capture both homology generators.
-
 ## Installation
 Dependencies:
   - Numpy
