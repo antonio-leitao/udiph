@@ -38,7 +38,7 @@ M = udiph.UDIPH(X=X, n_neighbors=15, distance_matrix=False, return_complex=False
 ```
 **Parameters:**
 -  ``X``: numpy array of shape=(samples,features) or shape=(samples,samples) containing the data. If data is a pairwise distance matrix then ``distance_matrix`` must be set to True.
- -  ``n_neighbors``: This determines the number of points sampled from the decision boundary. More points equates for a denser sample but slows the algorithm. Default is 1000.
+ -  ``n_neighbors``: number of nearest neighbors considered when creating the proximity graph. Too many and topological features are dissolved, too few are artifacts are created. Fairly robust.
  -  ``distance_matrix``: Boolean value indicating if input data is or not a distance_matrix 
  -  ``return_complex``: Boolean value indicating whether to return the weighted 1-d simplicial complex instead of a pairwise distance matrix.
  
