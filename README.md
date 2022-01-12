@@ -18,7 +18,7 @@ Vietoris-Rips filtration using metric space created by UDiPH is based on local d
 <p align="center">
   <img src="images/2filtrations_udiph.png" width="800"/>
 </p>
-
+Since we are in the presence of a continuous deformation it is excpeted that the homology remains invariant. However due to the difference in metric in the image space, the standard Vietoris-Rips filtration does not accuratly capture this invariance. Notice how a filtration using UDiPH captures manages to capture both homology generators.
 ## Installation
 Dependencies:
   - Numpy
@@ -33,19 +33,17 @@ pip install udiph
 ## Usage
 ```python
 import udiph
-cover = udiph.UDIPH(X=X, n_neighbors=15, distance_matrix=False, return_complex=False)
+M = udiph.UDIPH(X=X, n_neighbors=15, distance_matrix=False, return_complex=False)
 ```
 **Parameters:**
 -  ``X``: numpy array of shape=(samples,features) or shape=(samples,samples) containing the data. If data is a pairwise distance matrix then ``distance_matrix`` must be set to True.
  -  ``n_neighbors``: This determines the number of points sampled from the decision boundary. More points equates for a denser sample but slows the algorithm. Default is 1000.
  -  ``distance_matrix``: Boolean value indicating if input data is or not a distance_matrix 
- -  ``return_complex``: Initial point distribution, it is also the distribution of    the points in the decision boundary. Currently supports only _uniform_         (default).
+ -  ``return_complex``: Boolean value indicating whether to return the weighted 1-d simplicial complex instead of a pairwise distance matrix.
  
 **Returns:**
- -  ``cover``: numpy array (n_points, n_features) of points in the decision boundary.
-
-## Why should you use it?
-
+ -  ``M``: numpy array (samples, samples) pairwise distance matrix with respect to new Riemannian metric.
+ -  ``A``: (optional) numpy array (samples, samples) adjacency matrix of the weighted 1-d simplicial complex.
 
 ## How does it work?
 The basic assumption on UDiPh relies on the idea that data comes uniformly sampled from an unknown Riemmannian manifold. As a consequence, "bigger" holes in the governing manifold are respresented by having a higher number of points sampled from their boundary, and "small" holes will have less points sampled.
