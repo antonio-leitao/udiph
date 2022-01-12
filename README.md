@@ -48,8 +48,6 @@ M = udiph.UDIPH(X=X, n_neighbors=15, distance_matrix=False, return_complex=False
 
 ## How does it work?
 The basic assumption on UDiPh relies on the idea that data comes uniformly sampled from an unknown Riemmannian manifold. As a consequence, "bigger" holes in the governing manifold are respresented by having a higher number of points sampled from their boundary, and "small" holes will have less points sampled.
-
-For an in-depth explanation look at this [post](https://antonio-leitao.netlify.app/post/ph/). 
  
 ## Citation
 If you use UDiPH in your work or parts of the algorithm please consider citing:
