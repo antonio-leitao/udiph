@@ -7,16 +7,16 @@ UDiPH is a package that creates a new metric space where the points are uniforml
 
 UDiPH excells when comparing homology of spaces with different metrics, for example consider a continuous deformation acting on a set of points:
 <p align="center">
-  <img src="images/udiph_readme.png" width="800"/>
+  <img src="images/udiph_readme.png" width="600"/>
 </p>
 
 Standard Vietoris-Rips filtration:
 <p align="center">
-  <img src="images/2filtrations_std.png" width="800"/>
+  <img src="images/2filtrations_std.png" width="600"/>
 </p>
 Vietoris-Rips filtration using metric space created by UDiPH is based on local density:
 <p align="center">
-  <img src="images/2filtrations_udiph.png" width="800"/>
+  <img src="images/2filtrations_udiph.png" width="600"/>
 </p>
 Since we are in the presence of a continuous deformation it is expected that the homology remains invariant. However due to the difference in metric in the image space, the standard Vietoris-Rips filtration does not accuratly capture this invariance. Notice how a filtration using UDiPH manages to capture both homology generators.
 
