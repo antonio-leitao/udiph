@@ -7,11 +7,11 @@ UDiPH is a package that creates a new metric space where the points are uniforml
 
 Standard Vietoris-Rips filtration:
 <p align="center">
-  <img src="images/2filtrations_std.png" width="800"/>
+  <img src="images/2filtrations_std.png" width="600"/>
 </p>
 Vietoris-Rips filtration using metric space created by UDiPH is based on local density:
 <p align="center">
-  <img src="images/2filtrations_udiph.png" width="800"/>
+  <img src="images/2filtrations_udiph.png" width="600"/>
 </p>
 
 ## Installation
